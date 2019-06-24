@@ -36,7 +36,6 @@ public:
             _stateset(stateset)
         {
             _point = new osg::Point;
-            _point->setSize(1.0);
             _point->setDistanceAttenuation(osg::Vec3(0.0,0.0000,0.05f));
             _stateset->setAttribute(_point.get());
         }
@@ -120,7 +119,8 @@ int main( int argc, char **argv )
     arguments.getApplicationUsage()->addCommandLineOption("--points","Sets the polygon mode to GL_POINT for front and back faces.");
 
 
-    
+    // construct the viewer.
+    osgViewer::Viewer viewer;
 
     bool shader = false;
     while (arguments.read("--shader")) shader = true;
@@ -143,9 +143,6 @@ int main( int argc, char **argv )
         arguments.getApplicationUsage()->write(std::cout,osg::ApplicationUsage::COMMAND_LINE_OPTION);
         return 1;
     }
-    
-    // construct the viewer.
-    osgViewer::Viewer viewer(arguments);
 
     // read the scene from the list of file specified commandline args.
     osg::ref_ptr<osg::Node> loadedModel = osgDB::readRefNodeFiles(arguments);
@@ -216,6 +213,7 @@ int main( int argc, char **argv )
 
         osg::Shader* vertex_shader = new osg::Shader(osg::Shader::VERTEX, vertexShaderSource);
         program->addShader(vertex_shader);
+
 #if 0
         //////////////////////////////////////////////////////////////////
         // fragment shader
@@ -223,10 +221,7 @@ int main( int argc, char **argv )
         char fragmentShaderSource[] =
             "void main(void) \n"
             "{ \n"
-            "    gl_FragColor[0] = gl_Color[0]/255.0;\n"
-            "    gl_FragColor[1] = gl_Color[1]/255.0;\n"
-            "    gl_FragColor[2] = gl_Color[2]/255.0;\n"
-            "    gl_FragColor[3] = gl_Color[3]/255.0;\n"
+            "    gl_FragColor = gl_Color; \n"
             "}\n";
 
         osg::Shader* fragment_shader = new osg::Shader(osg::Shader::FRAGMENT, fragmentShaderSource);

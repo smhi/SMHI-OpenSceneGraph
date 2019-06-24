@@ -644,17 +644,6 @@ struct ReplaceAlphaWithLuminanceOperator
     inline void rgba(float& r,float& g,float& b,float& a) const { float l = (r+g+b)*0.3333333; a = l; }
 };
 
-struct ReplaceAlphaWithLuminanceInvertedOperator
-{
-    ReplaceAlphaWithLuminanceInvertedOperator() {}
-
-    inline void luminance(float&) const {}
-    inline void alpha(float&) const {}
-    inline void luminance_alpha(float& l,float& a) const { a = 1.0-l; }
-    inline void rgb(float&,float&,float&) const { }
-    inline void rgba(float& r,float& g,float& b,float& a) const { float l = (r+g+b)*0.3333333; a = 1.0-l; }
-};
-
 osg::Image* colorSpaceConversion(ColorSpaceOperation op, osg::Image* image, const osg::Vec4& colour)
 {
     GLenum requiredPixelFormat = image->getPixelFormat();
@@ -663,7 +652,6 @@ osg::Image* colorSpaceConversion(ColorSpaceOperation op, osg::Image* image, cons
         case (MODULATE_ALPHA_BY_LUMINANCE):
         case (MODULATE_ALPHA_BY_COLOR):
         case (REPLACE_ALPHA_WITH_LUMINANCE):
-        case (REPLACE_ALPHA_WITH_LUMINANCE_INVERTED):
             if (image->getPixelFormat()==GL_RGB || image->getPixelFormat()==GL_BGR) requiredPixelFormat = GL_RGBA;
             break;
         case (REPLACE_RGB_WITH_LUMINANCE):
@@ -701,12 +689,6 @@ osg::Image* colorSpaceConversion(ColorSpaceOperation op, osg::Image* image, cons
         {
             OSG_NOTICE<<"doing conversion REPLACE_ALPHA_WITH_LUMINANCE"<<std::endl;
             osg::modifyImage(image, ReplaceAlphaWithLuminanceOperator());
-            return image;
-        }
-        case (REPLACE_ALPHA_WITH_LUMINANCE_INVERTED):
-        {
-            OSG_NOTICE<<"doing conversion REPLACE_ALPHA_WITH_LUMINANCE_INVERTED"<<std::endl;
-            osg::modifyImage(image, ReplaceAlphaWithLuminanceInvertedOperator());
             return image;
         }
         case (REPLACE_RGB_WITH_LUMINANCE):

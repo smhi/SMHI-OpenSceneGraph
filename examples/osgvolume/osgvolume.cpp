@@ -420,10 +420,8 @@ int main( int argc, char **argv )
     arguments.getApplicationUsage()->addCommandLineOption("--s_maxTextureSize <size>","Set the texture maximum resolution in the s (x) dimension.");
     arguments.getApplicationUsage()->addCommandLineOption("--t_maxTextureSize <size>","Set the texture maximum resolution in the t (y) dimension.");
     arguments.getApplicationUsage()->addCommandLineOption("--r_maxTextureSize <size>","Set the texture maximum resolution in the r (z) dimension.");
-    arguments.getApplicationUsage()->addCommandLineOption("--modulate-alpha-by-colour <colourModulate.x()> <colourModulate.y()> <colourModulate.z()> <colourModulate.w()>","For each pixel multiply the alpha value by the color.");
     arguments.getApplicationUsage()->addCommandLineOption("--modulate-alpha-by-luminance","For each pixel multiply the alpha value by the luminance.");
     arguments.getApplicationUsage()->addCommandLineOption("--replace-alpha-with-luminance","For each pixel set the alpha value to the luminance.");
-    arguments.getApplicationUsage()->addCommandLineOption("--replace-alpha-with-luminance-inverted","For each pixel set the alpha value to 1-luminance.");
     arguments.getApplicationUsage()->addCommandLineOption("--replace-rgb-with-luminance","For each rgb pixel convert to the luminance.");
     arguments.getApplicationUsage()->addCommandLineOption("--num-components <num>","Set the number of components to in he target image.");
     arguments.getApplicationUsage()->addCommandLineOption("--no-rescale","Disable the rescaling of the pixel data to 0.0 to 1.0 range");
@@ -568,9 +566,7 @@ int main( int argc, char **argv )
     while(arguments.read("--modulate-alpha-by-luminance")) { colourSpaceOperation = osg::MODULATE_ALPHA_BY_LUMINANCE; }
     while(arguments.read("--modulate-alpha-by-colour", colourModulate.x(),colourModulate.y(),colourModulate.z(),colourModulate.w() )) { colourSpaceOperation = osg::MODULATE_ALPHA_BY_COLOR; }
     while(arguments.read("--replace-alpha-with-luminance")) { colourSpaceOperation = osg::REPLACE_ALPHA_WITH_LUMINANCE; }
-    while(arguments.read("--replace-alpha-with-luminance-inverted")) { colourSpaceOperation = osg::REPLACE_ALPHA_WITH_LUMINANCE_INVERTED; }
     while(arguments.read("--replace-rgb-with-luminance")) { colourSpaceOperation = osg::REPLACE_RGB_WITH_LUMINANCE; }
-    
 
 
     enum RescaleOperation

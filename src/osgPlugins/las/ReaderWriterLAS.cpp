@@ -28,7 +28,6 @@ class ReaderWriterLAS : public osgDB::ReaderWriter
             supportsExtension("las", "LAS point cloud format");
             supportsExtension("laz", "compressed LAS point cloud format");
             supportsOption("v", "Verbose output");
-            supportsOption("d", "Debug output");
             supportsOption("noScale", "don't scale vertices according to las haeder - put schale in matixTransform");
             supportsOption("noReCenter", "don't transform vertex coords to re-center the pointcloud");
         }
@@ -55,7 +54,6 @@ class ReaderWriterLAS : public osgDB::ReaderWriter
         virtual ReadResult readNode(std::istream& ifs, const Options* options) const {
             // Reading options
             bool _verbose = false;
-            bool _debug = false;
             bool _scale = true;
             bool _recenter = true;
             if (options)
@@ -67,10 +65,6 @@ class ReaderWriterLAS : public osgDB::ReaderWriter
                     if (opt == "v")
                     {
                         _verbose = true;
-                    }
-                    if (opt == "d")
-                    {
-                        _debug = true;
                     }
                     if (opt == "noScale")
                     {
@@ -133,21 +127,10 @@ class ReaderWriterLAS : public osgDB::ReaderWriter
 
                 // Extract color components from LAS point
                 liblas::Color c = p.GetColor();
-                /*
                 uint32_t r = c.GetRed() >> 8;
                 uint32_t g = c.GetGreen() >> 8;
                 uint32_t b = c.GetBlue() >> 8;
-                
-                */
-                /*
-                float r = c.GetRed()/255.0;
-                float g = c.GetGreen()/255.0;
-                float b = c.GetBlue()/255.0;
-                float a = 1.0;*/    // default value, since LAS point has no alpha information
-                uint32_t r = c.GetRed();
-                uint32_t g = c.GetGreen();
-                uint32_t b = c.GetBlue();
-                uint32_t a = 255;
+                uint32_t a = 255;    // default value, since LAS point has no alpha information
 
                 if (vertices->size() == 0)
                 {
@@ -158,7 +141,7 @@ class ReaderWriterLAS : public osgDB::ReaderWriter
                 {
                     if (singleColor)
                     {
-                        singleColor = (singleColorValue == c);//set false if different color found
+                        singleColor = singleColorValue == c;//set false if different color found
                     }
                 }
                 if (vertices->size() >= targetNumVertices)
@@ -213,12 +196,7 @@ class ReaderWriterLAS : public osgDB::ReaderWriter
                 colours->push_back(osg::Vec4ub(r, g, b, a));
 
                 // Warning: Printing zillion of points may take looong time
-                if (_debug)
-                {
-                    std::cout << i << ". " << p << '\n';
-                    std::cout << "Color: " << r << "," << g << "," << b << '\n';
-                    std::cout << "SingleColor: " << singleColor << '\n';
-                }
+                //std::cout << i << ". " << p << '\n';
                 i++;
             }
             // calculate the mid point of the point cloud
@@ -251,7 +229,7 @@ class ReaderWriterLAS : public osgDB::ReaderWriter
                     << std::endl << std::endl;
             }
 
-            geometry->setUseDisplayList(false);
+            geometry->setUseDisplayList(true);
             geometry->setUseVertexBufferObjects(true);
             geometry->setVertexArray(vertices);
             if (singleColor)
