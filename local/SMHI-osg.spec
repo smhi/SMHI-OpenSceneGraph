@@ -1,6 +1,6 @@
 %define appname SMHI-OpenSceneGraph
 %define name SMHI-OpenSceneGraph
-%define version 3.6.0
+%define version 3.6.3
 %define release 1.0
 %define vendor	smhi.se
 
@@ -35,7 +35,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root,-)
-   /usr/bin/osg2cpp
+/usr/bin/osg2cpp
    /usr/bin/osganalysis
    /usr/bin/osgarchive
    /usr/bin/osgconv
@@ -666,148 +666,148 @@ rm -rf $RPM_BUILD_ROOT
    /usr/lib64/libOpenThreads.so.21
    /usr/lib64/libOpenThreads.so.3.3.1
    /usr/lib64/libosg.so
-   /usr/lib64/libosg.so.156
-   /usr/lib64/libosg.so.3.6.0
+   /usr/lib64/libosg.so.158
+   /usr/lib64/libosg.so.3.6.3
    /usr/lib64/libosgAnimation.so
-   /usr/lib64/libosgAnimation.so.156
-   /usr/lib64/libosgAnimation.so.3.6.0
+   /usr/lib64/libosgAnimation.so.158
+   /usr/lib64/libosgAnimation.so.3.6.3
    /usr/lib64/libosgDB.so
-   /usr/lib64/libosgDB.so.156
-   /usr/lib64/libosgDB.so.3.6.0
+   /usr/lib64/libosgDB.so.158
+   /usr/lib64/libosgDB.so.3.6.3
    /usr/lib64/libosgFX.so
-   /usr/lib64/libosgFX.so.156
-   /usr/lib64/libosgFX.so.3.6.0
+   /usr/lib64/libosgFX.so.158
+   /usr/lib64/libosgFX.so.3.6.3
    /usr/lib64/libosgGA.so
-   /usr/lib64/libosgGA.so.156
-   /usr/lib64/libosgGA.so.3.6.0
+   /usr/lib64/libosgGA.so.158
+   /usr/lib64/libosgGA.so.3.6.3
    /usr/lib64/libosgManipulator.so
-   /usr/lib64/libosgManipulator.so.156
-   /usr/lib64/libosgManipulator.so.3.6.0
+   /usr/lib64/libosgManipulator.so.158
+   /usr/lib64/libosgManipulator.so.3.6.3
    /usr/lib64/libosgParticle.so
-   /usr/lib64/libosgParticle.so.156
-   /usr/lib64/libosgParticle.so.3.6.0
+   /usr/lib64/libosgParticle.so.158
+   /usr/lib64/libosgParticle.so.3.6.3
    /usr/lib64/libosgPresentation.so
-   /usr/lib64/libosgPresentation.so.156
-   /usr/lib64/libosgPresentation.so.3.6.0
+   /usr/lib64/libosgPresentation.so.158
+   /usr/lib64/libosgPresentation.so.3.6.3
    /usr/lib64/libosgShadow.so
-   /usr/lib64/libosgShadow.so.156
-   /usr/lib64/libosgShadow.so.3.6.0
+   /usr/lib64/libosgShadow.so.158
+   /usr/lib64/libosgShadow.so.3.6.3
    /usr/lib64/libosgSim.so
-   /usr/lib64/libosgSim.so.156
-   /usr/lib64/libosgSim.so.3.6.0
+   /usr/lib64/libosgSim.so.158
+   /usr/lib64/libosgSim.so.3.6.3
    /usr/lib64/libosgTerrain.so
-   /usr/lib64/libosgTerrain.so.156
-   /usr/lib64/libosgTerrain.so.3.6.0
+   /usr/lib64/libosgTerrain.so.158
+   /usr/lib64/libosgTerrain.so.3.6.3
    /usr/lib64/libosgText.so
-   /usr/lib64/libosgText.so.156
-   /usr/lib64/libosgText.so.3.6.0
+   /usr/lib64/libosgText.so.158
+   /usr/lib64/libosgText.so.3.6.3
    /usr/lib64/libosgUI.so
-   /usr/lib64/libosgUI.so.156
-   /usr/lib64/libosgUI.so.3.6.0
+   /usr/lib64/libosgUI.so.158
+   /usr/lib64/libosgUI.so.3.6.3
    /usr/lib64/libosgUtil.so
-   /usr/lib64/libosgUtil.so.156
-   /usr/lib64/libosgUtil.so.3.6.0
+   /usr/lib64/libosgUtil.so.158
+   /usr/lib64/libosgUtil.so.3.6.3
    /usr/lib64/libosgViewer.so
-   /usr/lib64/libosgViewer.so.156
-   /usr/lib64/libosgViewer.so.3.6.0
+   /usr/lib64/libosgViewer.so.158
+   /usr/lib64/libosgViewer.so.3.6.3
    /usr/lib64/libosgVolume.so
-   /usr/lib64/libosgVolume.so.156
-   /usr/lib64/libosgVolume.so.3.6.0
+   /usr/lib64/libosgVolume.so.158
+   /usr/lib64/libosgVolume.so.3.6.3
    /usr/lib64/libosgWidget.so
-   /usr/lib64/libosgWidget.so.156
-   /usr/lib64/libosgWidget.so.3.6.0
-   /usr/lib64/osgPlugins-3.6.0/osgdb_3dc.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_3ds.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_ac.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_bmp.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_bsp.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_bvh.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_cfg.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_curl.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_dae.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_dds.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_deprecated_osg.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_deprecated_osganimation.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_deprecated_osgfx.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_deprecated_osgparticle.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_deprecated_osgshadow.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_deprecated_osgsim.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_deprecated_osgterrain.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_deprecated_osgtext.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_deprecated_osgviewer.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_deprecated_osgvolume.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_deprecated_osgwidget.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_dot.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_dxf.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_freetype.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_gdal.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_gif.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_gles.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_glsl.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_gz.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_hdr.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_ive.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_jp2.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_jpeg.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_ktx.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_las.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_logo.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_lua.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_lwo.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_lws.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_md2.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_mdl.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_normals.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_nvtt.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_obj.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_ogr.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_openflight.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_osc.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_osg.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_osga.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_osgjs.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_osgshadow.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_osgterrain.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_osgtgz.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_osgviewer.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_p3d.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_pic.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_ply.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_png.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_pnm.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_pov.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_pvr.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_revisions.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_rgb.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_rot.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_scale.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_serializers_osg.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_serializers_osganimation.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_serializers_osgfx.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_serializers_osgga.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_serializers_osgmanipulator.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_serializers_osgparticle.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_serializers_osgshadow.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_serializers_osgsim.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_serializers_osgterrain.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_serializers_osgtext.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_serializers_osgui.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_serializers_osgutil.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_serializers_osgviewer.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_serializers_osgvolume.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_shp.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_stl.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_tf.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_tga.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_tgz.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_tiff.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_trans.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_trk.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_txf.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_txp.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_vtf.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_x.so
-   /usr/lib64/osgPlugins-3.6.0/osgdb_zip.so
+   /usr/lib64/libosgWidget.so.158
+   /usr/lib64/libosgWidget.so.3.6.3
+   /usr/lib64/osgPlugins-3.6.3/osgdb_3dc.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_3ds.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_ac.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_bmp.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_bsp.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_bvh.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_cfg.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_curl.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_dae.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_dds.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_deprecated_osg.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_deprecated_osganimation.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_deprecated_osgfx.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_deprecated_osgparticle.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_deprecated_osgshadow.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_deprecated_osgsim.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_deprecated_osgterrain.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_deprecated_osgtext.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_deprecated_osgviewer.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_deprecated_osgvolume.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_deprecated_osgwidget.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_dot.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_dxf.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_ffmpeg.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_freetype.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_gdal.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_gif.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_gles.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_glsl.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_gz.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_hdr.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_ive.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_jp2.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_jpeg.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_ktx.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_las.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_logo.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_lua.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_lwo.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_lws.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_md2.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_mdl.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_normals.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_obj.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_ogr.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_openflight.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_osc.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_osg.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_osga.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_osgjs.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_osgshadow.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_osgterrain.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_osgtgz.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_osgviewer.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_p3d.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_pic.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_ply.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_png.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_pnm.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_pov.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_pvr.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_revisions.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_rgb.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_rot.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_scale.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_serializers_osg.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_serializers_osganimation.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_serializers_osgfx.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_serializers_osgga.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_serializers_osgmanipulator.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_serializers_osgparticle.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_serializers_osgshadow.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_serializers_osgsim.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_serializers_osgterrain.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_serializers_osgtext.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_serializers_osgui.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_serializers_osgutil.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_serializers_osgviewer.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_serializers_osgvolume.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_shp.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_stl.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_tf.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_tga.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_tgz.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_tiff.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_trans.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_trk.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_txf.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_txp.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_vtf.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_x.so
+   /usr/lib64/osgPlugins-3.6.3/osgdb_zip.so
    /usr/lib64/pkgconfig/openscenegraph-osg.pc
    /usr/lib64/pkgconfig/openscenegraph-osgAnimation.pc
    /usr/lib64/pkgconfig/openscenegraph-osgDB.pc
@@ -986,6 +986,8 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue Jun 25 2019 Yngve Einarsson <Yngve.Einarsson@smhi.se>
+- Update to official release 3.6.3 
 * Fri Apr 13 2018 Yngve Einarsson <Yngve.Einarsson@smhi.se>
 - Update to official release 3.6.0 
 * Mon Mar 26 2018 Yngve Einarsson <Yngve.Einarsson@smhi.se>
